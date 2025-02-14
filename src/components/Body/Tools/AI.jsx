@@ -43,7 +43,7 @@ const AIModel = () => {
     return (
         <div className={`pb-5 dark:bg-gray-900/50 overflow-hidden bg-black/70  rounded-lg w-[80%] flex flex-center gap-5 mx-auto flex-wrap min-h-[200px]`}>  
             <div className='font-bold font-Rowdies bg-gray-950 dark:bg-black w-[100%] text-center border-b dark:border-green-400 border-sky-500  py-4 mb-10 text-green-400'>
-                <span className='btn-cliping text-[25px]' >AI Model Interaction</span>
+                <span className='btn-cliping text-[25px]' >AI <span> Model</span> Interaction</span>
             </div>
             <form className={`flex flex-wrap flex-center`} onSubmit={handleSubmit}>
                 <textarea
