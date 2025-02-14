@@ -41,18 +41,24 @@ const AIModel = () => {
     };
 
     return (
-        <div className={`py-5 bg-stone-900 rounded w-[80%] flex flex-center gap-5 mx-auto flex-wrap min-h-[200px]`}>
-            <h1 className='font-bold text-green-400'>AI Model Interaction</h1>
+        <div className={`pb-5 dark:bg-gray-900/50 overflow-hidden bg-black/70  rounded-lg w-[80%] flex flex-center gap-5 mx-auto flex-wrap min-h-[200px]`}>  
+            <div className='font-bold font-Rowdies bg-gray-950 dark:bg-black w-[100%] text-center border-b dark:border-green-400 border-sky-500  py-4 mb-10 text-green-400'>
+                <span className='btn-cliping text-[25px]' >AI Model Interaction</span>
+            </div>
             <form className={`flex flex-wrap flex-center`} onSubmit={handleSubmit}>
                 <textarea
-                    className='w-[80%] mx-auto py-1 px-3 rounded-lg text-zinc font-bold'
-                    placeholder="Enter prompt..."
+                    style={{ backgroundColor: '#2d2d2d' }}
+                    className=" focus:outline-none w-[80%] mx-auto py-1 px-3 rounded-lg text-zinc font-bold text-start resize-none overflow-hidden min-h-[50px] align-top"
+                    placeholder="Enter prompt . . ."
                     value={prompt}
                     onChange={handleInputChange}
                     rows="4"
+                    wrap="soft"
                     cols="50"
                 />
-                <button className='btn' type="submit">Generate Response</button>
+                <button className='btn dark:bg-gray-950' type="submit">
+                    <span className='btn-cliping'>Generate Response</span>
+                </button>
             </form>
 
             {error && (

@@ -16,7 +16,7 @@ const Loading = () => {
       {[...Array(3)].map((_, i) => (
         <motion.div
           key={i}
-          className="w-3 h-3 bg-sky-400 rounded-full"
+          className="w-3 h-3 bg-sky-400 dark:bg-green-400 rounded-full"
           animate={{
             y: [-8, 8, -8], 
             opacity: [0.3, 1, 0.3]

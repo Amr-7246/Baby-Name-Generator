@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Hind+Mysuru:wght@300;400;500;600;700&family=Orbitron:wght@400..900&family=Shafarik&family=Yuji+Mai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Orbitron:wght@400..900&family=Rowdies:wght@300;400;700&family=Shafarik&family=Yuji+Mai&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +8,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* transition-property: background-color; */
+    transition-duration: 0.3s ;
   }
   
   body {
@@ -21,7 +26,7 @@ body.light {
   width: 100dvw;
   overflow-x: hidden;
   height: 100%;
-  background: #ad411f; 
+  background: #8d2d10; 
   user-select: none;
 }
 
@@ -44,19 +49,19 @@ body.light {
   }
     /* *########### backGround-icons */
     .backGround-icons {
-        @apply absolute dark:text-zinc/80  text-white/10 duration-[500ms]
+        @apply absolute text-zinc/50  dark:text-white/10 duration-[500ms]
     }
     /* *########### schema */
     .schema {
-        @apply w-[80%] dark:bg-black/50  duration-[500ms] min-h-[500px] mt-[20px] rounded-[30px] border-[1px] border-white/20 bg-black/50 mx-auto flex-center
+        @apply md:w-[80%] w-[90%]  dark:bg-black/50  duration-[500ms] min-h-[500px] mt-[20px] rounded-[30px] border-[1px] border-white/20 bg-black/50 mx-auto flex-center
     }
     /* *########### schema */
     .schemaNav {
-        @apply w-[80%] dark:bg-black/50 duration-[500ms] h-[100px] mt-[20px] rounded-[30px] border-[1px] border-white/20 bg-black/50 mx-auto flex-center
+        @apply md:w-[80%] w-[90%] dark:bg-black/50 duration-[500ms] h-[100px] mt-[20px] rounded-[30px] border-[1px] border-white/20 bg-black/50 mx-auto flex-center
     }
     /* *########### body-div */
     .body-div {
-        @apply bg-rose-400
+        @apply 
     }
     /* *########### container */
     .container {
@@ -64,11 +69,15 @@ body.light {
     }
     /* *########### text-cliping */
     .text-cliping {
-        @apply h-[100px] max-w-[500px] mx-auto font-black text-[35px] justify-center items-center flex bg-gradient-to-l from-sky-400/70 via-white/50 to-sky-400/70 text-transparent text-clip bg-clip-text
+        @apply h-[100px] max-w-[500px] mx-auto font-black text-[35px] justify-center items-center flex bg-gradient-to-l from-sky-400/70 via-rose-400/70 to-sky-500/70  dark:from-green-400/70 dark:via-rose-500/70 duration-[500ms] dark:to-green-500/70 text-transparent text-clip bg-clip-text
     }
     /* *########### button */
     .btn {
-        @apply mx-[10px] text-green-400 dark:text-zinc  font-bold px-5 py-2 rounded-3xl bg-sky-400/10 my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:dark:text-zinc hover:border-blue
+        @apply mx-[10px] font-Orbitron dark:bg-white/5 bg-sky-600/70 dark:text-green-400 text-zinc duration-[300ms] font-bold px-5 py-2 rounded-3xl  my-5 hover:bg-transparent hover:dark:bg-transparent  border border-transparent hover:border hover:text-blue hover:dark:text-sky-500 hover:border-blue
+    }
+    /* *########### btn-cliping */
+    .btn-cliping {
+        @apply bg-gradient-to-l dark:from-green-700  dark:via-rose-700 dark:to-sky-700 from-zinc via-rose-900 to-slate-800 text-transparent text-clip bg-clip-text
     }
     /* *########### flex-center */
     .flex-center {

@@ -13,7 +13,7 @@ const Body = () => {
   const [isMoreOptionsOpen, setIsMoreOptionsOpen] = useState(false);
   const [name, setName] = useState("");
   const [config, setConfig] = useState({
-    origin: "canada",
+    origin: "Canada",
     gender: "male",
     twinsMale: false,
     twinsFemale: false,
@@ -114,12 +114,12 @@ const Body = () => {
       // ? popularName Controlle  
     } else if (config.popularName) {
       newName = names[config.origin]?.popularity?.[
-        Math.floor(Math.random() * names[config.origin].popular.length)
+        Math.floor(Math.random() * names[config.origin].popularity.length)
       ];
       // ? unPopularName Controlle  
     } else if (config.unPopularName) {
       newName = names[config.origin]?.uniqueName?.[
-        Math.floor(Math.random() * names[config.origin].unique.length)
+        Math.floor(Math.random() * names[config.origin].uniqueName.length)
         ];
       } 
       
@@ -137,22 +137,22 @@ const Body = () => {
   return (
     <div className="schema flex-wrap gap-10 py-[50px]">
       {/* Start Show Generated Name */}
-      <div className="bg-gray-900/50 rounded-lg flex flex-center w-[80%] md:w-[50%] lg:w-[40%] m-1 h-[180px]">
-        <span className="text-cliping ">{name || <Loading/> }</span>
+      <div className="bg-black/70 dark:bg-gray-900/50 rounded-lg px-5 text-center flex flex-center w-[80%] md:w-[50%] lg:w-[40%] m-1 h-[180px]">
+        <span className="text-cliping font-Shafarik capitalize ">{name || <Loading/> }</span>
       </div>
       {/* End Show Generated Name */}
       {/* Start configuration Generated Name options */}
-      <div className="flex flex-wrap flex-center bg-gray-900/50 rounded-lg w-[80%] md:w-[50%] lg:w-[40%] h-[100px] lg:h-[180px] ">
-        <button className={`btn `} onClick={Generate}>
-          Generate
+      <div className="flex flex-wrap flex-center dark:bg-gray-900/50 bg-black/70 rounded-lg w-[80%] md:w-[50%] lg:w-[40%] min-h-[100px] lg:h-[180px] ">
+        <button className={`btn dark:bg-gray-950 `} onClick={Generate}>
+          <span className="btn-cliping" >Generate</span>
         </button>
-        <button className={`btn`} onClick={() => setIsConfigurationOpen(!isConfigurationOpen)}>
-          Configuration
+        <button className={`btn dark:bg-gray-950 `} onClick={() => setIsConfigurationOpen(!isConfigurationOpen)}>
+          <span  className="btn-cliping">Configuration</span>
         </button>
       </div>
       {/* options config */}
       <div className={` ${isConfigurationOpen? ' relative opacity-1 top-[0px] ' : 'opacity-0 z-[-5] top-[50px] mb-[-200px] ' } relative  duration-[500ms] `}>
-        <div className={`flex flex-wrap flex-center bg-gray-900/50 rounded-lg w-[80%] max-w-[500px] gap-2  mx-auto `}>
+        <div className={`flex flex-wrap flex-center dark:bg-gray-900/50 bg-black/70  rounded-lg w-[80%] max-w-[500px] gap-2  mx-auto `}>
             {/* origin  */}
             <Dropdown
               title="Origin"
